@@ -3,7 +3,7 @@ import secrets
 from gitDeploy import gitDeploy
 from DeployServer import DeployServer
 from wlanhelper import wlanhelper
-import OTA_test
+import OTA_test as OTA
 
 filesToKeep=["secrets.py"]
 ignoreUpload=[".gitignore", "LICENSE", "README.md"]
@@ -14,3 +14,4 @@ ds = DeployServer(gd, wlan, 80)
 
 print(wlan.ifconfig()[0])
 
+OTA.deployTest()
