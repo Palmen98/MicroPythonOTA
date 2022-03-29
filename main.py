@@ -3,6 +3,7 @@ import secrets
 from gitDeploy import gitDeploy
 from DeployServer import DeployServer
 from wlanhelper import wlanhelper
+import OTA_test
 
 filesToKeep=["secrets.py"]
 ignoreUpload=[".gitignore", "LICENSE", "README.md"]
