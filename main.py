@@ -5,7 +5,7 @@ from DeployServer import DeployServer
 from wlanhelper import wlanhelper
 
 filesToKeep=["secrets.py"]
-ignoreUpload=[".gitmodules", ".gitignore", 'pymakr.conf', "LICENSE", "README.md"]
+ignoreUpload=[".gitignore", "LICENSE", "README.md"]
 gd = gitDeploy("Palmen98", "MicroPythonOTA", filesToKeep, ignoreUpload)
 
 wlan = wlanhelper()
