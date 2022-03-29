@@ -12,3 +12,5 @@ def deployTest():
     time.sleep(3)
     pycom.rgbled(0x0000FF)  # Blue
     time.sleep(3)
+    pycom.heartbeat(False)
+
