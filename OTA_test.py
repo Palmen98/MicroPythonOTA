@@ -1,9 +1,10 @@
 import pycom
 import time
 
-pycom.heartbeat(False)
 
-while True:
+
+def deployTest():
+    pycom.heartbeat(False)
     #colors in hexadecimal (0xRRGGBB)
     pycom.rgbled(0xFF0000)  # Red
     time.sleep(3)
