@@ -10,6 +10,7 @@ except:
 import secrets
 import machine
 import _thread
+import time
 
 class gitDeploy:
 
@@ -21,6 +22,8 @@ class gitDeploy:
 
 
     def deploy(self):
+        print('Starting to measure time')
+        start = time.time()
         c = HTTPClient('api.github.com', secrets.basicAuthentication)
         client = GitHubClient(c, self.username, self.repoName)
         
@@ -29,5 +32,6 @@ class gitDeploy:
 
         for f in client.files:
             fs.downloadAndSave(f.clientDirectory, f.name, f.url)
-
+        end = time.time()
+        print('Seconds :', end - start)
         machine.reset()
