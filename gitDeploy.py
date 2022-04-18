@@ -33,6 +33,5 @@ class gitDeploy:
         for f in client.files:
             fs.downloadAndSave(f.clientDirectory, f.name, f.url)
         end_time = time.time()
-        print('Seconds below:')
         print(end_time - start_time)
         machine.reset()
