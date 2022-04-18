@@ -23,7 +23,7 @@ class gitDeploy:
 
     def deploy(self):
         print('Starting to measure time')
-        start = time.time()
+        start_time = time.time()
         c = HTTPClient('api.github.com', secrets.basicAuthentication)
         client = GitHubClient(c, self.username, self.repoName)
         
@@ -32,6 +32,7 @@ class gitDeploy:
 
         for f in client.files:
             fs.downloadAndSave(f.clientDirectory, f.name, f.url)
-        end = time.time()
-        print('Seconds:', end - start)
+        end_time = time.time()
+        print('Seconds below:')
+        print(end_time - start_time)
         machine.reset()
