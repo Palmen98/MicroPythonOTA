@@ -8,6 +8,8 @@ os.fsformat('/flash')
 # Reboot device
 Press reset button on Lopy4
 
+# Upload program
+
 # Start OTA in REPL
 from gitDeploy import gitDeploy 
 filesToKeep=["secrets.py"]
